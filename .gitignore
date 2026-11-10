@@ -1,0 +1,48 @@
+# Python-generated files
+# Python 自动生成的字节码目录，不用进仓库
+__pycache__/
+# 散落的字节码文件，同上
+*.py[oc]
+# 打包产物目录
+build/
+# 发布产物目录
+dist/
+# wheel 包目录
+wheels/
+# 包元数据目录
+*.egg-info
+
+# Virtual environments
+# uv 建的虚拟环境，每台机器自己装
+.venv
+
+# 本地密钥只放 .env，不进仓库、不进发给学生的压缩包；字段说明见 .env.example
+# 真密钥就在这，绝不能提交
+.env
+# 其他机器或开发工具生成的本地环境文件也不提交，但保留公开模板
+.env.*
+!.env.example
+
+# 运行产物：日志、测试缓存、DeepEval 缓存、离线回放结果
+# 运行时写的日志
+logs/
+# pytest 的缓存
+.pytest_cache/
+# DeepEval 的缓存
+.deepeval/
+# 覆盖率、类型检查和代码检查缓存
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+# 离线回放跑出来的结果文件
+tests/offline/offline_result.json
+
+# 本地生成的 Chroma 向量索引；保留 data/documents/ 原始文档即可重建
+data/vectorstore/
+
+# 编辑器和操作系统本地文件
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
